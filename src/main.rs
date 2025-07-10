@@ -1,5 +1,5 @@
 use core::{num, panic};
-use std::{ffi::c_short, net::Shutdown};
+use std::{array, ffi::c_short, net::Shutdown};
 
 fn main() {
     // immutable();
@@ -202,4 +202,11 @@ fn for_example() {
     // for v in &mut vec {
     //     println!("Current vector value after push: {}", v);
     // }
+
+    // 基本数据类型数组就不会转移所有权
+    let arr = [1, 2, 3, 4, 5];
+    for v in arr {
+        println!("Current array value: {}", v);
+    }
+    println!("Array after for loop: {:?}", arr); // 这里可以继续使用arr，因为数组的所有权没有转移
 }
