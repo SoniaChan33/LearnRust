@@ -1,3 +1,4 @@
+use core::panic;
 use std::{ffi::c_short, net::Shutdown};
 
 fn main() {
@@ -65,4 +66,30 @@ fn binding() {
     // 遮蔽长期绑定的变量
     let long_lived_binding = 5_f32;
     println!("long_lived_binding after shadowing: {}", long_lived_binding);
+}
+
+fn add(i: i32, j: i32) -> i32 {
+    i + j
+}
+
+// 函数无返回值的情况
+fn add_two(i: i32, j: i32) {
+    let result: i32 = i + j;
+    println!("The sum of {} and {} is: {}", i, j, result);
+    // 这里没有返回值，函数结束时会隐式返回 ()
+}
+
+// 函数永不返回的情况
+// ! 表示函数永不返回
+// 例如： panic! 宏会导致程序崩溃，函数不会返回
+// 这种函数通常用于错误处理或程序终止的场景。
+fn add_one(i: i32, j: i32) -> ! {
+    panic!("weeee");
+}
+
+// 死循环也不会返回
+fn infinite_loop() -> ! {
+    loop {
+        // 永远不会返回
+    }
 }
