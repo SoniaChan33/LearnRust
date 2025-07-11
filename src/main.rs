@@ -140,7 +140,7 @@ fn loop_example() {
     println!("Loop ended at count: {}", count);
 
     // let语句中使用loop
-    let result = loop {
+    let result: i32 = loop {
         count += 1;
         if count == 10 {
             println!("Breaking the loop at count: {}", count);
@@ -209,4 +209,11 @@ fn for_example() {
         println!("Current array value: {}", v);
     }
     println!("Array after for loop: {:?}", arr); // 这里可以继续使用arr，因为数组的所有权没有转移
+
+    let a = [4, 3, 2, 1];
+
+    // 遍历索引和值
+    for (i, v) in a.iter().enumerate() {
+        println!("The {}th element is {}", i + 1, v);
+    }
 }
