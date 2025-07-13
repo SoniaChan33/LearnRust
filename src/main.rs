@@ -7,8 +7,8 @@ mod arrays_slices;
 mod loops;
 mod ownership;
 mod reference;
+mod string_study;
 mod type_study;
-
 fn main() {
     // immutable();
     // mt_const();
