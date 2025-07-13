@@ -36,6 +36,9 @@ pub fn lifetime_example() {
     let large = longest("a", "ab");
     println!("The longest string is: {}", large);
 
+    // 生命周期注解示例
+    // 这里的 'a 表示返回的引用与参数 x 和 y 的生命周期
+    // 相同，确保返回的引用在调用者的作用域内有效
     fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
         if x.len() > y.len() { x } else { y }
     }
