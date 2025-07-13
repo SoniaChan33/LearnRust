@@ -3,6 +3,7 @@ mod condition;
 mod consts;
 mod vars;
 
+mod arrays_slices;
 mod loops;
 mod ownership;
 mod reference;
@@ -25,5 +26,5 @@ fn main() {
     // type_study::sequence_example();
     // type_study::convert();
     // ownership::_ownership_example();
-    reference::reference_example();
+    // reference::reference_example();
 }
