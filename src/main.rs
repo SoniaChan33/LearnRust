@@ -4,6 +4,7 @@ mod consts;
 mod vars;
 
 mod arrays_slices;
+mod enums_study;
 mod loops;
 mod ownership;
 mod reference;
