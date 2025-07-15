@@ -7,6 +7,7 @@ mod arrays_slices;
 mod enums_study;
 mod loops;
 mod ownership;
+mod pattern_match;
 mod reference;
 mod string_study;
 mod struct_example;

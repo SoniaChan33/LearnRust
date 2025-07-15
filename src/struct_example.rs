@@ -223,5 +223,5 @@ fn print_the_rectangle() {
     };
     println!("{}", rect1);
 
-    let result = println!("{:?}", rect1);
+    let result: () = println!("{:?}", rect1);
 }
