@@ -9,6 +9,7 @@ mod loops;
 mod ownership;
 mod reference;
 mod string_study;
+mod struct_example;
 mod type_study;
 fn main() {
     // immutable();
