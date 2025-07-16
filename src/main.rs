@@ -8,28 +8,34 @@ mod collection;
 mod collection_practices;
 mod enums_study;
 mod loops;
+mod option_example;
 mod ownership;
+mod panic_result;
 mod pattern_match;
 mod reference;
 mod string_study;
 mod struct_example;
 mod type_study;
+
+// use a::{b::log as log1, log as log2};
 fn main() {
-    // immutable();
-    // mt_const();
-    // binding();
-    // static_num();
-    // if_else();
-    // loops::loop_example();
-    // loops::while_example();
-    // loops::for_example();
-    // type_study::print_int_show();
-    // type_study::print_float_show();
-    // type_study::nan_example();
-    // type_study::boolean_example();
-    // type_study::char_example();
-    // type_study::sequence_example();
-    // type_study::convert();
-    // ownership::_ownership_example();
-    // reference::reference_example();
+    // log1();
+    // log2(); // 内部的mod需要多层调用
+    a::log(); // 相对路径访问
+
+    a::b::log(); // 绝对路径访问
+}
+
+mod a {
+    const num: usize = 1;
+    pub fn log() {
+        println!("{}", num);
+    }
+    pub mod b {
+        // 无论是func还是mod 在外部需要调用的话都需要加上pub
+        const num2: usize = 2;
+        pub fn log() {
+            println!("{}", num2);
+        }
+    }
 }
