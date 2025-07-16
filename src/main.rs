@@ -5,6 +5,7 @@ mod vars;
 
 mod arrays_slices;
 mod collection;
+mod collection_practices;
 mod enums_study;
 mod loops;
 mod ownership;
