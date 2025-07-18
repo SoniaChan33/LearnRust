@@ -1,3 +1,5 @@
+fn main() {}
+
 pub fn _ownership_example() {
     let s1: String = String::from("Hello");
     let s2: String = s1; // 转移所有权

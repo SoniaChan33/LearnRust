@@ -1,6 +1,9 @@
 use std::hash::DefaultHasher;
 use std::hash::Hash;
 use std::vec;
+
+fn main() {}
+
 #[test]
 fn vec_example() {
     // 创建一个空的vec
@@ -111,4 +114,3 @@ fn hashmap_ownership() {
 
     println!("{}", team_name);
 }
-

@@ -1,22 +1,3 @@
-mod bindings;
-mod condition;
-mod consts;
-mod vars;
-
-mod arrays_slices;
-mod collection;
-mod collection_practices;
-mod enums_study;
-mod loops;
-mod option_example;
-mod ownership;
-mod panic_result;
-mod pattern_match;
-mod reference;
-mod string_study;
-mod struct_example;
-mod type_study;
-
 // use a::{b::log as log1, log as log2};
 fn main() {
     // log1();

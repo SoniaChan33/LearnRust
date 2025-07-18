@@ -28,7 +28,7 @@ impl<T> Stack<T> {
         self.elements.last()
     }
 }
-#[test]
+
 // 测试用例
 fn main() {
     let mut stack = Stack::new();

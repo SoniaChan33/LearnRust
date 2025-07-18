@@ -16,3 +16,5 @@ pub fn binding() {
     let long_lived_binding = 5_f32;
     println!("long_lived_binding after shadowing: {}", long_lived_binding);
 }
+
+fn main() {}

@@ -1,3 +1,5 @@
+fn main() {}
+
 pub fn if_else() {
     let number = 3;
     if number % 4 == 0 {

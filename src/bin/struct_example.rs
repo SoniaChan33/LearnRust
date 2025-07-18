@@ -225,3 +225,5 @@ fn print_the_rectangle() {
 
     let result: () = println!("{:?}", rect1);
 }
+
+fn main() {}

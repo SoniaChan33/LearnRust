@@ -40,3 +40,5 @@ fn error_kind_example() {
         },
     };
 }
+
+fn main() {}

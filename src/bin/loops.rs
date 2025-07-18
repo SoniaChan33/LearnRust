@@ -97,3 +97,5 @@ pub fn for_example() {
         println!("The {}th element is {}", i + 1, v);
     }
 }
+
+fn main() {}

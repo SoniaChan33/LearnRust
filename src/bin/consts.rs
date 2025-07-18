@@ -14,3 +14,5 @@ pub fn static_num() {
         println!("static NUMBER: {}", NUMBER);
     }
 }
+
+fn main() {}

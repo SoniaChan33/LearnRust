@@ -32,3 +32,5 @@ pub fn string_example() {
 fn say_hello(s: &str) {
     println!("Hello, {}!", s);
 }
+
+fn main() {}

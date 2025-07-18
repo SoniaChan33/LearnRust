@@ -116,3 +116,5 @@ fn arr_practice(nums: &[i32]) -> Vec<i32> {
 
     answer
 }
+
+fn main() {}

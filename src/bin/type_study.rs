@@ -1,7 +1,3 @@
-use std::arch::aarch64::float32x2_t;
-
-use rand::rand_core::le;
-
 pub fn _print_int_show() {
     let _integer: i32 = 2147483647; // 最大值
     let _integer: i32 = -2147483648; // 最小值
@@ -61,3 +57,5 @@ pub fn convert() {
     let d: i32 = c as i32; // 将f64转换为i32
     println!("Converted value: {}", d);
 }
+
+fn main() {}

@@ -9,3 +9,7 @@ pub fn mutable() {
     y = 15;
     println!("The value of y is now: {}", y);
 }
+
+fn main() {
+    immutable();
+}

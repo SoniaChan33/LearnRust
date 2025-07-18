@@ -1,7 +1,6 @@
-fn main() {
-    // Option学习
-}
+fn main() {}
 
+// Option学习
 fn option_example() {
     // 创建Option
     let some_number = Some(5);
@@ -50,4 +49,3 @@ fn is_none_example() {
     println!("some_string: {:?}", some_string.is_none());
     println!("absent_number: {:?}", absent_number.is_none());
 }
-

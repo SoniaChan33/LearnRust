@@ -1,3 +1,5 @@
+fn main() {}
+
 pub fn reference_example() {
     // 创建一个可变字符串s1
     let mut s: String = String::from("Hello");

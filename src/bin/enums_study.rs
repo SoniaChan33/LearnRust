@@ -227,3 +227,5 @@ fn enum_practice() {
     let size = std::mem::size_of::<MyEnum>();
     println!("Size of MyEnum: {}", size);
 }
+
+fn main() {}
