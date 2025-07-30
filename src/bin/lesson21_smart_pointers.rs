@@ -58,42 +58,70 @@ fn weak_reference() {
     // 循环引用：a.next -> b，b.prev -> a
     // 无法释放内存！
 }
+
 use std::rc::Weak;
 /**
  * 实现一个简单的社交网络
  */
 struct User {
     username: String,
-    friends: RefCell<Vec<Weak<User>>>,
+    friends: RefCell<Vec<Weak<RefCell<User>>>>,
 }
 
 impl User {
-    fn new(name: String) -> Rc<User> {
-        Rc::new(User {
+    fn new(name: String) -> Rc<RefCell<User>> {
+        Rc::new(RefCell::new(User {
             username: name,
             friends: RefCell::new(vec![]),
-        })
+        }))
     }
 
-    fn print_friends(&self) {
-        for friend in self.friends.borrow().iter() {
-            println!(
-                "{}'s friends list: {}",
-                self.username,
-                friend.upgrade().unwrap().username
-            );
+    fn show_friends(&self) {
+        print!("{}的朋友：", self.username);
+        for weak_friend in self.friends.borrow().iter() {
+            if let Some(friend) = weak_friend.upgrade() {
+                print!("{} ", friend.borrow().username);
+            }
         }
+        println!();
     }
 }
-fn add_friend(this: Rc<User>, other: Rc<User>) {
-    this.friends.borrow_mut().push(Rc::downgrade(&other));
-    other.friends.borrow_mut().push(Rc::downgrade(&this));
+fn add_friend(this: Rc<RefCell<User>>, other: Rc<RefCell<User>>) {
+    this.borrow_mut()
+        .friends
+        .borrow_mut()
+        .push(Rc::downgrade(&other));
+    other
+        .borrow_mut()
+        .friends
+        .borrow_mut()
+        .push(Rc::downgrade(&this));
 }
 #[test]
 fn test_social_network() {
-    let alice = User::new("Alice".to_string());
+    let alice: Rc<RefCell<User>> = User::new("Alice".to_string());
     let bob = User::new("Bob".to_string());
-    add_friend(alice.clone(), bob.clone());
-    alice.print_friends();
-    bob.print_friends();
+    add_friend(Rc::clone(&alice), Rc::clone(&bob));
+    alice.borrow().show_friends();
+    bob.borrow().show_friends();
 }
+// 老师的答案
+// fn add_friend(this: &Rc<RefCell<User>>, other: &Rc<RefCell<User>>) {
+//     this.borrow_mut()
+//         .friends
+//         .borrow_mut()
+//         .push(Rc::downgrade(&other));
+//     other
+//         .borrow_mut()
+//         .friends
+//         .borrow_mut()
+//         .push(Rc::downgrade(&this));
+// }
+
+// fn main(){
+//     let alice: Rc<RefCell<User>> = User::new("Alice".to_string());
+//     let bob = User::new("Bob".to_string());
+//     add_friend(&alice, &bob);
+//     alice.borrow().show_friends();
+//     bob.borrow().show_friends();
+// }
