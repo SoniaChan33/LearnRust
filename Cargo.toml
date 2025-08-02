@@ -4,8 +4,128 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-rand = "0.9.0"
-serde_json = "1.0.140"
+rand = "0.9.2"
+serde_json = "1.0.142"
+crossbeam-channel = "0.5"
+
 [lib]
 name = "my_library"
 path = "src/lib.rs"
+
+# 变量和基础概念
+[[bin]]
+name = "variables"
+path = "src/bin/variables/main.rs"
+
+[[bin]]
+name = "data_types"
+path = "src/bin/data_types/main.rs"
+
+[[bin]]
+name = "arrays_slices"
+path = "src/bin/arrays_slices/main.rs"
+
+[[bin]]
+name = "collections"
+path = "src/bin/collections/main.rs"
+
+[[bin]]
+name = "collection_practices"
+path = "src/bin/collection_practices/main.rs"
+
+[[bin]]
+name = "conditionals"
+path = "src/bin/conditionals/main.rs"
+
+[[bin]]
+name = "pattern_matching"
+path = "src/bin/pattern_matching/main.rs"
+
+[[bin]]
+name = "pattern_matching_struct_example"
+path = "src/bin/pattern_matching/struct_example.rs"
+
+[[bin]]
+name = "ownership"
+path = "src/bin/ownership/main.rs"
+
+[[bin]]
+name = "references"
+path = "src/bin/references/main.rs"
+
+[[bin]]
+name = "box_smart_pointers"
+path = "src/bin/box_smart_pointers/main.rs"
+
+[[bin]]
+name = "panic_result"
+path = "src/bin/panic_result/main.rs"
+
+[[bin]]
+name = "enums"
+path = "src/bin/enums/main.rs"
+
+[[bin]]
+name = "option_type"
+path = "src/bin/option_type/main.rs"
+
+[[bin]]
+name = "strings"
+path = "src/bin/strings/main.rs"
+
+[[bin]]
+name = "modules"
+path = "src/bin/modules/main.rs"
+
+[[bin]]
+name = "bindings"
+path = "src/bin/bindings/main.rs"
+
+[[bin]]
+name = "constants"
+path = "src/bin/constants/main.rs"
+
+[[bin]]
+name = "loops"
+path = "src/bin/loops/main.rs"
+
+[[bin]]
+name = "lifetimes"
+path = "src/bin/lifetimes/main.rs"
+
+[[bin]]
+name = "generics"
+path = "src/bin/generics/main.rs"
+
+[[bin]]
+name = "smart_pointers"
+path = "src/bin/smart_pointers/main.rs"
+
+[[bin]]
+name = "traits"
+path = "src/bin/traits/main.rs"
+
+[[bin]]
+name = "macros"
+path = "src/bin/macros/main.rs"
+
+[[bin]]
+name = "closures"
+path = "src/bin/closures/main.rs"
+
+[[bin]]
+name = "iterators"
+path = "src/bin/iterators/main.rs"
+
+# 线程相关
+[[bin]]
+name = "thread_example"
+path = "src/bin/threads/thread_example.rs"
+
+[[bin]]
+name = "thread_handler"
+path = "src/bin/threads/thread_handler.rs"
+
+[[bin]]
+name = "thread_scheduler"
+path = "src/bin/threads/thread_scheduler.rs"

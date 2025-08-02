@@ -17,4 +17,7 @@ pub fn binding() {
     println!("long_lived_binding after shadowing: {}", long_lived_binding);
 }
 
-fn main() {}
+fn main() {
+    println!("Running lesson16 - Variable Bindings");
+    binding();
+}

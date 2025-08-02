@@ -1,6 +1,3 @@
-use core::{arch, num};
-use std::sync::Mutex;
-
 pub fn array_example() {
     let arr = [1, 2, 3, 4, 5];
     println!("Array: {:?}", arr);
